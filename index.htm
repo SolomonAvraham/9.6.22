@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form onsubmit="return clickSubmit()" id="formId">
+      <label for="firstName" id="firstNameLabel">First Name:</label>
+      <input
+        type="text"
+        name="firstName"
+        id="firstNameId"
+        placeholder="First Name"
+      />
+
+      <label for="lastName" id="LastNameLabel">Last Name:</label>
+      <input
+        type="text"
+        name="lastName"
+        id="lastNameId"
+        placeholder="Last Name"
+      required />
+
+      <label for="birthDate" id="birthDateLabel">Birthdate:</label>
+      <input type="date" name="birthDate" id="birthDateId" required/>
+
+      <label for="email" id="emailLabel">Email:</label>
+      <input type="email" name="email" id="emailId" placeholder="Email" required/>
+
+      <label for="tel" id="telLabel">Phone:</label>
+      <input type="tel" name="tel" id="telId" placeholder="Phone"  />
+
+      <label for="password1" id="password1Label">Password:</label>
+      <input
+        type="password"
+        name="password1"
+        id="password1Id"
+        placeholder="Password"
+     required />
+
+      <label for="password2" id="password2Label">Repet-Password:</label>
+      <input
+        type="password"
+        name="password2"
+        id="password2Id"
+        placeholder="re-Password"
+       />
+      <br>
+      <button id="checkButton">Submit</button>
+    </form>
+
+    <script src="main.js"></script>
+  </body>
+</html>
