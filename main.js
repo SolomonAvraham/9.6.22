@@ -4,8 +4,9 @@ function clickSubmit() {
     checkPassword(),
     checkPhone(),
     checkEmail(),
-    checkLasttName(),
-    checkFirstName())
+    checkLastName(),
+    checkFirstName(),
+    birthDate())
   ) {
     return true;
   }
@@ -13,34 +14,53 @@ function clickSubmit() {
 }
 
 var regex;
+
 function checkFirstName() {
-  regex = /^[a-zA-Z]{10,15}$/;
+  regex = /^[a-zA-Z]{10,}$/;
   if (regex.test(firstNameId.value)) {
     return true;
   }
-
-  firstNameLabel.innerHTML =
-    "First Name: <br> <span> *use at least 10 character* </span>";
+  firstNameLabel.innerHTML +=
+    "<br><small > *Use at least 10 character* </small>";
   firstNameLabel.style = "color:red";
-
   return false;
 }
 
-function checkLasttName() {
-  regex = /^[a-zA-Z]{10,15}$/;
+function checkLastName() {
+  regex = /^[a-zA-Z]{10,}$/;
   if (regex.test(lastNameId.value)) {
     return true;
   }
-
-  lastNameLabel.innerHTML =
-    "Last Name: <br> <span> *use at least 10 character* </span>";
+  lastNameLabel.innerHTML +=
+    "<br> <small> *use at least 10 character* </small>";
   lastNameLabel.style = "color:red";
-
-  return false; 
+  return false;
 }
 
+function birthDate() {
+ 
 
-function checkEmail() {}
+  if (birthDateId.value <= "2004-01-01") {
+    alert("true3");
+    return true;
+  }
+  alert("false3");
+  birthDateLabel.innerHTML += "<br> <small> * Must Be 18!* </small>";
+  birthDateLabel.style = "color:red";
+  return false;
+
+
+}
+
+function checkEmail() {
+  regex =
+    /(?:^|\s)[\w!#$%&'*+/=?^`{|}~-](\.?[\w!#$%&'*+/=?^`{|}~-]+)*@HELLO.com/;
+  if (true) {
+    return true;
+  }
+
+  return false;
+}
 
 function checkPhone() {}
 
