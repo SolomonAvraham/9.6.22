@@ -8,12 +8,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-
   margin-top: 5%;
   padding: 5%;
-  /* width: 50%; */
 }
 
 ::-webkit-input-placeholder {
-   text-align: center;
+  text-align: center;
 }

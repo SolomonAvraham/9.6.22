@@ -1,9 +1,9 @@
 function clickSubmit() {
   if ((checkPassword(),
-    checkPhone(),
-    checkEmail(),
-    checkLastName(),
-    checkFirstName(),
+    checkPhone()&&
+    checkEmail()&&
+    checkLastName()&&
+    checkFirstName()&&
     birthDate())
   ) {
     return true;
