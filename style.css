@@ -13,3 +13,7 @@ body {
   padding: 5%;
   /* width: 50%; */
 }
+
+::-webkit-input-placeholder {
+   text-align: center;
+}
